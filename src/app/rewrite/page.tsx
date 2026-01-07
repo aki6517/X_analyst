@@ -88,12 +88,12 @@ function RewriteContent() {
             <div className="container mx-auto px-4 py-12 max-w-2xl">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8">
-                    <h1 className="text-3xl font-bold text-white">✍️ リライト生成</h1>
+                    <h1 className="text-3xl font-bold text-white">✨ 投稿文を生成</h1>
                     <Link
-                        href="/analyze"
+                        href="/"
                         className="text-orange-300 hover:text-white transition-colors"
                     >
-                        ← 分析に戻る
+                        ← ホームに戻る
                     </Link>
                 </div>
 
@@ -182,7 +182,7 @@ function RewriteContent() {
                                 : "bg-gray-600 text-gray-400 cursor-not-allowed"
                             }`}
                     >
-                        {isGenerating ? "生成中..." : "リライトを生成"}
+                        {isGenerating ? "生成中..." : "✨ 投稿文を生成"}
                     </button>
                 </div>
 

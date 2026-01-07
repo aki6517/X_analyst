@@ -45,11 +45,65 @@ export default function Home() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">
-            🔍 X投稿分析ツール
+            🚀 X投稿 分析＆生成ツール
           </h1>
           <p className="text-purple-200">
-            伸びている投稿を発見し、あなたの投稿をリライト
+            バズった投稿から学び、あなたの投稿を生成
           </p>
+        </div>
+
+        {/* Main Action Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {/* Analyze Card */}
+          <Link
+            href="/analyze"
+            className="group bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-blue-400/30 hover:border-blue-400/50 transition-all hover:scale-105"
+          >
+            <div className="text-center">
+              <div className="text-5xl mb-4">📊</div>
+              <h2 className="text-2xl font-bold text-white mb-3">
+                投稿を分析する
+              </h2>
+              <p className="text-blue-200 text-sm mb-4">
+                バズった投稿のURLを貼り付けて、<br />
+                成功パターンを分析
+              </p>
+              <div className="inline-flex items-center text-blue-300 group-hover:text-white transition-colors">
+                <span>分析を始める</span>
+                <span className="ml-2">→</span>
+              </div>
+            </div>
+          </Link>
+
+          {/* Generate Card */}
+          <Link
+            href="/rewrite"
+            className="group bg-gradient-to-br from-orange-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-orange-400/30 hover:border-orange-400/50 transition-all hover:scale-105"
+          >
+            <div className="text-center">
+              <div className="text-5xl mb-4">✨</div>
+              <h2 className="text-2xl font-bold text-white mb-3">
+                投稿を生成する
+              </h2>
+              <p className="text-orange-200 text-sm mb-4">
+                分析不要！型を選んで<br />
+                すぐに投稿文を作成
+              </p>
+              <div className="inline-flex items-center text-orange-300 group-hover:text-white transition-colors">
+                <span>生成を始める</span>
+                <span className="ml-2">→</span>
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        {/* Divider */}
+        <div className="flex items-center my-12">
+          <div className="flex-1 h-px bg-white/20"></div>
+          <span className="px-4 text-purple-200 font-semibold">
+            バズっている投稿を探す
+          </span>
+          <div className="flex-1 h-px bg-white/20"></div>
         </div>
 
         {/* Search Form Card */}
@@ -147,26 +201,12 @@ export default function Home() {
               }`}
             onClick={(e) => !searchCommand && e.preventDefault()}
           >
-            Xで検索する →
+            🔍 Xで検索する →
           </a>
+          <p className="mt-3 text-center text-purple-300 text-sm">
+            💡 良い投稿が見つかったら、上の「投稿を分析する」から分析できます
+          </p>
         </div>
-
-        {/* Divider */}
-        <div className="flex items-center my-8">
-          <div className="flex-1 h-px bg-white/20"></div>
-          <span className="px-4 text-purple-200 text-sm">
-            良い投稿が見つかったら
-          </span>
-          <div className="flex-1 h-px bg-white/20"></div>
-        </div>
-
-        {/* Analyze Button */}
-        <Link
-          href="/analyze"
-          className="w-full flex items-center justify-center gap-2 py-4 rounded-lg font-semibold text-lg bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all"
-        >
-          📊 投稿を分析する
-        </Link>
       </div>
     </div>
   );
